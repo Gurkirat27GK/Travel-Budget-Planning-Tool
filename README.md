@@ -11,7 +11,8 @@ Member C – Charts, Reports & Data Visualizations
 
 Member D – Firebase Auth, Collaboration, Notifications & Currency Conversion
 
-🗓️ Day 1: Setup, Auth & Static UI Layouts
+🗓️ Day 1: Setup, Auth & Static UI Layouts:
+
 Member A:
 
 Initialize project using create-react-app
