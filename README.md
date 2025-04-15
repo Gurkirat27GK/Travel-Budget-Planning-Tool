@@ -1,50 +1,105 @@
 # Travel-Budget-Planning-Tool
 
-Context:
-Traveling can often lead to unexpected expenses, making it essential for travelers to plan and manage their budgets effectively. A travel budget planning tool can assist users in tracking their expenses, categorizing their spending, and ensuring they stay within their financial limits. By providing a clear overview of their budget allocation and spending habits, this tool empowers travelers to make informed financial decisions and enjoy their trips without the stress of overspending.
+🧭 Day 1 – Project Kickoff & Setup ✅ Goal of the Day: Understand the overall flow of the project
 
-Project Goal:
-Develop an intuitive travel budget planning tool that allows users to efficiently manage their travel expenses, set budget goals, and analyze their spending patterns.
+Set up the folder structure
 
-Frontend Focus:
+Create basic wireframes and structure for pages
 
-Expense Tracking Interface:
+Prepare foundational elements for Firebase, charts, and UI components
 
-Design a user-friendly interface where users can easily log their travel expenses. Include fields for date, description, amount, and category (e.g., accommodation, food, activities).
-Implement an intuitive layout that allows users to add new expenses quickly, with options to edit or delete entries as needed.
-Categorization System:
+🧩 Project Overview: You’re building a Travel Budget Planning Tool that helps users:
 
-Create a flexible categorization system that lets users customize their expense categories based on personal preferences or trip requirements (e.g., transportation, dining, entertainment).
-Provide pre-defined categories as suggestions to streamline the user experience.
-Cost Breakdown Visuals:
+Track expenses during travel (with categories like food, transport, etc.)
 
-Develop visual representations of budget allocation using pie charts, bar graphs, or line graphs to help users understand their spending habits at a glance.
-Include hover-over tooltips or clickable segments that display detailed information about each category, such as total spent and remaining budget.
-Budgeting Features:
+Set and monitor budget goals per category
 
-Implement functionality that allows users to set budget goals for each expense category, enabling them to plan their spending effectively.
-Create progress indicators that visually represent how much of the budget has been spent versus what remains, helping users stay on track.
-Weekly/Monthly Overview:
+Visualize spending with charts
 
-Introduce a weekly or monthly overview feature that aggregates expenses over time, providing insights into spending trends and allowing users to adjust their budgets accordingly.
-Use clear visualizations to display how expenses fluctuate over different periods.
-Alerts and Notifications:
+Collaborate with friends on shared trips
 
-Implement alerts or notifications that inform users when they are approaching or exceeding their budget limits in specific categories.
-Allow users to customize notification preferences, such as receiving reminders or alerts via email or in-app notifications.
-Expense Reports:
+Get alerts when nearing/exceeding budget
 
-Provide users with the ability to generate expense reports for their trips, which can be exported in various formats (e.g., PDF, CSV).
-Include summary statistics such as total expenses, budget adherence, and category breakdowns in the reports.
-Travel Currency Converter:
+Convert currencies while entering expenses
 
-Integrate a currency converter feature that allows users to enter expenses in different currencies and view them in their preferred currency.
-Ensure real-time conversion rates for accurate budgeting.
-Collaborative Budgeting:
+View reports and download them
 
-Allow users to invite travel companions to collaborate on a shared budget, making it easier to track joint expenses and contributions.
-Enable real-time updates so all users can see changes and adjustments as they happen.
-Mobile Responsiveness:
+The app will be:
 
-Ensure the tool is fully responsive, providing a seamless experience across devices, including desktops, tablets, and smartphones.
-Implement touch-friendly controls for mobile users, enhancing usability on smaller screens.
+Built using HTML, CSS, and JavaScript (no React)
+
+Use Firebase Realtime Database for backend
+
+Include Chart.js or Google Charts for visualizations
+
+Be responsive for mobile and desktop
+
+🛠️ Day 1 Tasks by Member 👤 Member A – Frontend UI & Layouts Tasks:
+
+Create main project folder and subfolders:
+
+bash Copy Edit /travel-budget-tool ├── index.html ├── /css ├── /js ├── /assets └── /pages (home.html, budget.html, report.html) Setup base index.html with basic structure and links to JS/CSS files
+
+Create navigation (Home, Budget, Report)
+
+Create simple wireframe of Expense Form UI:
+
+Fields: Date, Description, Amount, Category
+
+Add dummy form in home.html using HTML & CSS
+
+👤 Member B – Expense Tracking & Budget Logic Tasks:
+
+Create data/structure.json file (for now) to plan how expenses will be stored
+
+json Copy Edit { "tripID": { "expenses": { "expenseID": { "date": "2025-04-15", "description": "Dinner", "category": "Food", "amount": 400 } }, "budgets": { "Food": 1500, "Transport": 2000 } } } Plan logic for:
+
+Adding an expense
+
+Editing and deleting an expense
+
+Write skeleton JS functions for add/edit/delete (with comments)
+
+👤 Member C – Data Visualization & Reports Tasks:
+
+Research and choose a chart library (suggestion: Chart.js)
+
+Try a small working demo:
+
+Create a dummy pie chart with 3 categories: Food, Travel, Shopping
+
+Use chart.html and mock data for testing
+
+Decide:
+
+How pie/bar charts will represent budget vs spent
+
+What additional graphs are needed for weekly/monthly overview
+
+👤 Member D – Firebase + Collaboration Setup Tasks:
+
+Go to Firebase Console and:
+
+Create a new project: TravelBudgetTool
+
+Enable Realtime Database
+
+Enable Authentication > Email/Password
+
+Create a basic Firebase setup file (firebase.js):
+
+js Copy Edit import { initializeApp } from "firebase/app"; import { getDatabase } from "firebase/database";
+
+const firebaseConfig = { apiKey: "YOUR-KEY", authDomain: "YOUR-DOMAIN", databaseURL: "YOUR-URL", projectId: "YOUR-ID", storageBucket: "YOUR-BUCKET", messagingSenderId: "YOUR-SENDER-ID", appId: "YOUR-APP-ID" };
+
+const app = initializeApp(firebaseConfig); const db = getDatabase(app); export { db }; Test if Firebase is connected (log "Connected!" in console)
+
+Create rough plan for shared trips (via trip ID or invite link)
+
+📌 At End of Day: Have working navigation & basic UI placeholders
+
+Firebase project connected successfully
+
+Expense structure and basic chart demo ready
+
+Commit everything locally or share folder among group
