@@ -118,3 +118,5 @@ Firebase project connected successfully
 Expense structure and basic chart demo ready
 
 Commit everything locally or share folder among group
+
+hi
