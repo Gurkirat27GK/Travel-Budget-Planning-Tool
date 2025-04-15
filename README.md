@@ -1,187 +1,176 @@
 # Travel-Budget-Planning-Tool
 
-🛠 Team Members & Roles
-Member A – Frontend UI & Layouts
+📆 Travel Budget Planning Tool – 4 Day Schedule (React + Firebase)
+👥 Team Members & Roles
+Member A – Frontend UI Layouts & Responsiveness
 
-Member B – Expense Tracking & Budget Logic
+Member B – Expense Tracking, Budget Logic & Firebase Data Ops
 
-Member C – Data Visualization & Reports
+Member C – Charts, Reports & Data Visualizations
 
-Member D – Firebase Integration, Collaboration, Currency & Notifications
+Member D – Firebase Auth, Collaboration, Notifications & Currency Conversion
 
-🗓 Day 1: Setup + UI Design + Firebase Structure
-🔧 Objectives:
-Set up the project
-
-Establish Firebase structure and dependencies
-
-Build static UI layouts and routing
-
-✅ Tasks:
+🗓️ Day 1: Setup, Auth & Static UI Layouts
 Member A:
 
-Set up HTML/CSS/JS project boilerplate
+Initialize project using create-react-app
 
-Create pages: Home, Add Expense, Reports
+Install and configure react-router-dom
 
-Style main layout with header, footer, sidebar (if needed)
+Create pages: Home, Budget, Reports (basic placeholders)
+
+Setup responsive layout using Flexbox/Grid
 
 Member B:
 
-Define JSON data structure: expenses, categories, budgets
+Install & configure Firebase Realtime Database
 
-Create static Expense Form UI (Date, Description, Amount, Category)
+Create Firebase config and initialize DB
 
-Design Add/Edit/Delete buttons (non-functional yet)
+Define JSON schema for expenses (date, amount, description, category)
+
+Build initial static ExpenseForm UI (date, amount, category)
 
 Member C:
 
-Research Chart.js or similar
+Install Chart.js and react-chartjs-2
 
-Set up static chart area placeholders in Reports page
+Create reusable PieChart and BarChart components with dummy data
 
-Prepare layout for summary section (Total, Category breakdown, etc.)
+Set up reports page layout
 
 Member D:
 
-Set up Firebase Realtime Database
+Set up Firebase Authentication (Google Sign-in)
 
-Set up Firebase Auth (email/password sign-in)
+Create SignIn button component
 
-Create DB structure: /users/{uid}/expenses, /budgets, /categories
+Test sign-in flow and store user info
 
-Add team as collaborators in GitHub & share instructions to clone
+Research shared trip system using tripID or user linking
 
-🗓 Day 2: Core Functionality – Expenses + Budget + Firebase CRUD
-🔧 Objectives:
-Implement core functionality to add, update, and delete expenses
-
-Enable budget goal setting and category logic
-
-Start data binding with Firebase
-
-✅ Tasks:
+🗓️ Day 2: Expense Tracking, Budgeting, and Data Binding
 Member A:
 
-Make Expense Form functional (add data to Firebase)
+Style and connect ExpenseForm to state
 
-Fetch and display expenses in a table
+Render expenses in table/list format
 
-Add edit/delete button logic for entries
+Add Edit/Delete button placeholders
 
 Member B:
 
-Implement logic to calculate total expenses per category
+Implement Add/Edit/Delete expense logic in Firebase
 
-Enable users to set and update budget goals per category
+Create functions to read/write expenses from DB
 
-Show remaining vs spent amounts in UI
+Bind expense table with Firebase data
 
 Member C:
 
-Use Chart.js to create a working pie chart with Firebase data
+Connect PieChart to actual expense data (grouped by category)
 
-Enable chart to update on real-time changes
+Add hover tooltips with totals per category
 
-Add tooltips with category details on hover
+Start basic BudgetProgressBar component
 
 Member D:
 
-Enable Firebase Auth with login/logout
+Implement "shared trip" system via trip code or shared user ID
 
-Add real-time sync logic using onValue/onSnapshot
+Store trip ID with expenses
 
-Add shared trip logic via shared trip ID or code in DB
+Show which users are part of the trip
 
-🗓 Day 3: Reports, Collaboration, Currency, Notifications
-🔧 Objectives:
-Add exportable reports, currency converter, real-time collab & notifications
-
-✅ Tasks:
+🗓️ Day 3: Budget Goals, Currency, Alerts & Reports
 Member A:
 
-Build Export PDF/CSV buttons (use libraries like jsPDF or FileSaver)
+Create budget input UI for each category
 
-Create Weekly/Monthly toggle buttons for report filtering
+Display progress bar (spent vs. goal)
+
+Add toggle to switch between weekly/monthly view
 
 Member B:
 
-Implement alert logic (budget exceeded)
+Store budget goals in Firebase
 
-Display alerts using toasts or banners (UI only, logic from Member D)
+Calculate totals vs. budgets
 
-Member C:
-
-Update charts to toggle between weekly/monthly view
-
-Add detailed breakdown section (spent per category, trend analysis)
-
-Member D:
-
-Integrate currency converter API (e.g., ExchangeRate-API)
-
-Convert and store expenses in both original and preferred currencies
-
-Implement notification preferences using Firebase/localStorage
-
-🗓 Day 4: Final Testing + Responsiveness + Deployment
-🔧 Objectives:
-Ensure full mobile responsiveness
-
-Polish all UI elements and fix bugs
-
-Deploy and document
-
-✅ Tasks:
-Member A:
-
-Make all pages responsive using media queries and Flexbox/Grid
-
-Improve form input styles and user interactions for mobile
-
-Member B:
-
-Test Add/Edit/Delete, budget logic, and category customizations
-
-Check edge cases (empty fields, invalid inputs)
+Trigger warning when user nears/exceeds category budget
 
 Member C:
 
-Finalize charts and reports
+Finalize charts (category pie, trend bar chart)
 
-Make charts responsive on different devices
+Add Monthly/Weekly toggle for chart views
+
+Start PDF/CSV export button (with jspdf or react-csv)
 
 Member D:
 
-Deploy app using Firebase Hosting
+Integrate currency converter using free API (e.g., exchangerate-api.com)
 
-Write README with setup instructions, features, screenshots
+Auto-convert expense inputs to user’s preferred currency
 
+Add setting toggle for currency preference
+
+🗓️ Day 4: Mobile UX, Testing, Docs & Deployment
 All Members:
 
-Perform end-to-end testing
+Test all features collaboratively
 
-Fix bugs, improve UI consistency
+Debug layout issues on desktop and mobile
 
-Record demo video or prepare for group presentation
+Ensure Firebase sync is real-time for all users
 
-✅ Key Features Checklist:
- Add/Edit/Delete Expenses
+Member A:
 
- Budget Goals & Progress Bars
+Final polish: responsive layout, mobile-friendly inputs
 
- Real-time Firebase Integration
+Add dark mode toggle (optional)
 
- Data Visualizations (Charts)
+Member B:
 
- Weekly/Monthly Reports + Export
+Add final form validations and fallback UI for errors
 
- Currency Converter
+Test expense flows for edge cases
 
- Notifications/Alerts
+Member C:
 
- Mobile Responsiveness
+Polish visualizations (colors, spacing)
 
- Collaborative Budgeting
+Complete report exports
 
- Firebase Deployment
+Member D:
+
+Add toast notifications (e.g., for alerts, expense added, budget exceeded)
+
+Finalize invite link system
+
+Ensure login/logout and session persistence
+
+All:
+
+Write README.md: Description, Features, Setup Steps, Tech Stack
+
+Deploy app to Firebase Hosting or GitHub Pages
+
+✅ Final Key Features Recap
+Firebase Auth with shared budgeting
+
+Add/Edit/Delete expenses with category system
+
+Real-time data sync using Firebase DB
+
+Budget setting with visual progress tracking
+
+Pie & bar charts for expenses and trends
+
+Currency converter
+
+PDF/CSV report export
+
+Alerts for overspending
+
+Mobile responsiveness
