@@ -6,7 +6,7 @@ Set up the folder structure
 
 Create basic wireframes and structure for pages
 
-Prepare foundational elements for Firebase, charts, and UI components
+Prepare foundational elements for Firebase, charts, and UI components.
 
 
 
