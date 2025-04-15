@@ -8,6 +8,8 @@ Create basic wireframes and structure for pages
 
 Prepare foundational elements for Firebase, charts, and UI components
 
+
+
 🧩 Project Overview: You’re building a Travel Budget Planning Tool that helps users:
 
 Track expenses during travel (with categories like food, transport, etc.)
@@ -24,6 +26,7 @@ Convert currencies while entering expenses
 
 View reports and download them
 
+
 The app will be:
 
 Built using HTML, CSS, and JavaScript (no React)
@@ -34,7 +37,11 @@ Include Chart.js or Google Charts for visualizations
 
 Be responsive for mobile and desktop
 
-🛠️ Day 1 Tasks by Member 👤 Member A – Frontend UI & Layouts Tasks:
+
+
+🛠️ Day 1 Tasks by Member 
+
+👤 Member A – Frontend UI & Layouts Tasks:
 
 Create main project folder and subfolders:
 
@@ -48,6 +55,8 @@ Fields: Date, Description, Amount, Category
 
 Add dummy form in home.html using HTML & CSS
 
+
+
 👤 Member B – Expense Tracking & Budget Logic Tasks:
 
 Create data/structure.json file (for now) to plan how expenses will be stored
@@ -59,6 +68,8 @@ Adding an expense
 Editing and deleting an expense
 
 Write skeleton JS functions for add/edit/delete (with comments)
+
+
 
 👤 Member C – Data Visualization & Reports Tasks:
 
@@ -75,6 +86,8 @@ Decide:
 How pie/bar charts will represent budget vs spent
 
 What additional graphs are needed for weekly/monthly overview
+
+
 
 👤 Member D – Firebase + Collaboration Setup Tasks:
 
@@ -95,6 +108,8 @@ const firebaseConfig = { apiKey: "YOUR-KEY", authDomain: "YOUR-DOMAIN", database
 const app = initializeApp(firebaseConfig); const db = getDatabase(app); export { db }; Test if Firebase is connected (log "Connected!" in console)
 
 Create rough plan for shared trips (via trip ID or invite link)
+
+
 
 📌 At End of Day: Have working navigation & basic UI placeholders
 
