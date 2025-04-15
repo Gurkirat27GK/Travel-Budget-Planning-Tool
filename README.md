@@ -1,7 +1,8 @@
 # Travel-Budget-Planning-Tool
 
 📆 Travel Budget Planning Tool – 4 Day Schedule (React + Firebase)
-👥 Team Members & Roles
+👥 Team Members & Roles:
+
 Member A – Frontend UI Layouts & Responsiveness
 
 Member B – Expense Tracking, Budget Logic & Firebase Data Ops
