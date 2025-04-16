@@ -1,7 +1,8 @@
-// src/pages/Login.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./auth.css";
+import "../styles/auth.css";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase"; 
 
 function Login() {
   const navigate = useNavigate();
@@ -14,17 +15,21 @@ function Login() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Simulate login validation (in real app, check against saved credentials)
-    if (formData.email && formData.password) {
-      console.log("User logged in:", formData);
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        formData.email,
+        formData.password
+      );
 
-      // Redirect to home page after successful login
-      navigate("/");
-    } else {
-      alert("Invalid credentials");
+      console.log("Logged in user:", userCredential.user);
+      navigate("/"); // Go to homepage after login
+    } catch (error) {
+      console.error("Login error:", error.message);
+      alert("Login failed: " + error.message);
     }
   };
 
