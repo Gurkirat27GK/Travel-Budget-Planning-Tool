@@ -3,15 +3,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 3rem;
-    background-color: #66bb6a; /* Light green background */
+    
+    padding: 0rem 1.5rem;
+    background-color: #000000; /* Light green background */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
-  .logo-container {
+  .logo-container{
+    width: 30%;
+    
     font-size: 1.8rem;
     color: white;
     font-weight: bold;
+  }
+
+  img{
+    width: 40%;
   }
   
   .auth-links {

@@ -2,12 +2,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/header.css";  // Add this file for styling
+import Logo from "../assets/Logo.png"
 
 function Header() {
   return (
     <header className="header-container">
       <div className="logo-container">
-        <span className="logo-text">Travel Budget Planner</span>
+      <img src={Logo} alt="Travel Budgetting LOGO"/>
+        
       </div>
 
       {/* Sign Up and Login Links */}
