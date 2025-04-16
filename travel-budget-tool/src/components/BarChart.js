@@ -1,3 +1,4 @@
+// src/components/BarChart.js
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import {
@@ -7,38 +8,37 @@ import {
   BarElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
 } from "chart.js";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const BarChart = ({ data, options }) => {
-  return <Bar data={data} options={options} />;
-};
-
-BarChart.defaultProps = {
-  data: {
+const BarChart = () => {
+  const data = {
     labels: ["Jan", "Feb", "Mar", "Apr"],
     datasets: [
       {
         label: "Sales",
         data: [150, 200, 170, 220],
-        backgroundColor: "#36A2EB"
-      }
-    ]
-  },
-  options: {
+        backgroundColor: "#36A2EB",
+      },
+    ],
+  };
+
+  const options = {
     responsive: true,
     plugins: {
       legend: {
-        position: "top"
+        position: "top",
       },
       title: {
         display: true,
-        text: "Monthly Sales"
-      }
-    }
-  }
+        text: "Monthly Sales",
+      },
+    },
+  };
+
+  return <Bar data={data} options={options} />;
 };
 
 export default BarChart;
