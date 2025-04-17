@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./home.css";
+import "../styles/home.css";
+
 
 function Home() {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ function Home() {
           Plan smart, travel far. Manage your travel expenses with ease.
         </p>
 
-        <a href="/budget" className="cta-button">Start Planning</a>
+        <a href="/Planner" className="cta-button">Start Planning</a>
       </div>
 
       <section className="features">

@@ -9,6 +9,7 @@ import Budget from './pages/budget';
 import Reports from './pages/reports';
 import Login from './pages/login';
 import Signup from './pages/signup';
+import Planner from './pages/Planner'
 
 import './index.css';
 
@@ -19,7 +20,9 @@ function App() {
         <Header />
         <main>
           <Routes>
+
             <Route path="/" element={<Home />} />
+            <Route path="/Planner" element={<Planner />} />
             <Route path="/budget" element={<Budget />} />
             <Route path="/reports" element={<Reports />} />
             <Route path="/login" element={<Login />} />
