@@ -57,7 +57,7 @@ export default function Budget() {
             marginBottom: "20px",
           }}
         >
-          Budget
+          Expenses
         </h2>
 
         <div className="section" style={{ marginBottom: "30px" }}>

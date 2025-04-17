@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./converter.css";
+import "../styles/converter.css";
 
 const exchangeRates = {
   USD: { EUR: 0.85, INR: 75.0, GBP: 0.75, JPY: 110.0 },

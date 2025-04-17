@@ -7,7 +7,6 @@ export default function ExpenseForm({ onAddExpense, editing }) {
   const [date, setDate] = useState('');
 
   useEffect(() => {
-    console.log("Editing data in useEffect:", editing);
     if (editing) {
       setDescription(editing.description || '');
       setAmount(editing.amount || '');
