@@ -2,11 +2,16 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/home.css";
 
+
 function Home() {
   const navigate = useNavigate();
 
   const navigateToReports = () => {
-    navigate("/report"); // Navigate to the Reports page
+    navigate("/report"); 
+  };
+
+  const navigateToTrack = () => {
+    navigate("/budget"); 
   };
   const navigateToTrack = () => {
     navigate("/budget"); 
