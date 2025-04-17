@@ -2,7 +2,11 @@
     font-family: 'Segoe UI', sans-serif;
     text-align: center;
     padding: 2rem;
-    background: #caf3fb; /* soft minty background */
+    /* background: #caf3fb; soft minty background */
+    /* background-image: url("../assets/airplaneOverSea.jpg") ; */
+    background-image: image-set("../assets/airplaneOverSea.jpg");
+    /* background:src("../assets/airplaneOverSea.jpg"); */
+    background-size: cover;
     min-height: 100vh;
   }
   
