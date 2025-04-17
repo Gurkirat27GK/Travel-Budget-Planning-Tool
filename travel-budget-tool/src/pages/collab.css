@@ -1,0 +1,83 @@
+.collaborative-budget-page {
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+    background-color: #1f2937;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #38bdf8;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    color: #d1d5db;
+    margin-bottom: 1.5rem;
+  }
+  
+  .collaborators,
+  .expenses {
+    margin-bottom: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    color: #38bdf8;
+    margin-bottom: 1rem;
+  }
+  
+  input[type="email"],
+  input[type="text"],
+  input[type="number"] {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    background-color: #2d3748;
+    color: #fff;
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+  
+  button {
+    padding: 0.75rem 1.5rem;
+    background-color: #38bdf8;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  button:hover {
+    background-color: #0ea5e9;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .total-amount {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: #22c55e;
+  }
+  
+  .error {
+    color: #f87171;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  

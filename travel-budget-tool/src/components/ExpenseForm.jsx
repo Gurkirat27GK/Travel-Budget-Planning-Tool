@@ -1,23 +1,31 @@
 import { useState, useEffect } from 'react';
 
-export default function ExpenseForm({ onSubmit, initial = {} }) {
-  const [form, setForm] = useState({ 
-    description: '', 
-    amount: '', 
-    category: '' ,
-    tripId: ''
-});
+export default function ExpenseForm({ onSubmit, initial, tripId }) {
+  const [form, setForm] = useState({
+    description: '',
+    amount: '',
+    category: '',
+    tripId: tripId || '',
+  });
 
-useEffect(() => {
-    if (initial) {
+  useEffect(() => {
+    if (initial && typeof initial === 'object') {
       setForm({
-        description: initial.description || "",
-        amount: initial.amount || "",
-        category: initial.category || "",
-        tripId: initial.tripId || "",
+        description: initial.description || '',
+        amount: initial.amount || '',
+        category: initial.category || '',
+        tripId: initial.tripId || '',
+        id: initial.id, // optional field, used in update
+      });
+    } else {
+      setForm({
+        description: '',
+        amount: '',
+        category: '',
+        tripId: tripId || '',
       });
     }
-  }, [initial]);
+  }, [initial, tripId]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,11 +35,16 @@ useEffect(() => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!form.description || !form.amount || !form.category || !form.tripId) {
-      alert("Please fill in all fields");
+      alert('Please fill in all fields');
       return;
     }
     onSubmit(form);
-    setForm({ description: "", amount: "", category: "", tripId: "" });
+    setForm({
+      description: '',
+      amount: '',
+      category: '',
+      tripId: tripId || '',
+    });
   };
 
   return (
@@ -70,7 +83,7 @@ useEffect(() => {
         required
       />
       <button type="submit" className="bg-blue-500 text-white py-2 rounded">
-        {initial.id ? "Update" : "Add"} Expense
+        {initial && initial.id ? 'Update' : 'Add'} Expense
       </button>
     </form>
   );
