@@ -1,22 +1,38 @@
-// src/pages/budget.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { db, ref, push, set, onValue, remove, update } from '../firebase/firebaseConfig';
 import ExpenseForm from "../components/ExpenseForm";
 import ExpenseTable from "../components/ExpenseTable";
 
-function Budget() {
+export default function Budget() {
   const [expenses, setExpenses] = useState([]);
+  const [editing, setEditing] = useState(null);
 
-  const handleAddExpense = (expense) => {
-    const newExpense = { ...expense, id: Date.now() };
-    setExpenses((prev) => [...prev, newExpense]);
+  useEffect(() => {
+    const expensesRef = ref(db, 'expenses');
+    onValue(expensesRef, (snapshot) => {
+      const data = snapshot.val();
+      const loadedExpenses = data ? Object.entries(data).map(([id, val]) => ({ id, ...val })) : [];
+      setExpenses(loadedExpenses);
+    });
+  }, []);
+
+  const addExpense = async (expense) => {
+    if (editing) {
+      await update(ref(db, `expenses/${editing.id}`), expense);
+      setEditing(null); // Clear editing after update
+    } else {
+      const newRef = push(ref(db, 'expenses'));
+      await set(newRef, expense);
+    }
   };
 
-  const handleDelete = (id) => {
-    setExpenses(expenses.filter((exp) => exp.id !== id));
+  const deleteExpense = async (id) => {
+    await remove(ref(db, `expenses/${id}`));
   };
 
-  const handleEdit = (id) => {
-    alert("Edit functionality coming soon for expense ID: " + id);
+  const handleEdit = (expense) => {
+    console.log("Editing expense:", expense);
+    setEditing(expense);
   };
 
   const total = expenses.reduce((acc, item) => acc + parseFloat(item.amount || 0), 0);
@@ -41,19 +57,20 @@ function Budget() {
             marginBottom: "20px",
           }}
         >
-          Gurkirat
+          Budget
         </h2>
 
         <div className="section" style={{ marginBottom: "30px" }}>
-          <h3 style={{ color: "#38bdf8" }}>Add New Expense</h3>
-          <ExpenseForm onAddExpense={handleAddExpense} />
+          <h3 style={{ color: "#38bdf8" }}>{editing ? "Edit Expense" : "Add New Expense"}</h3>
+          <ExpenseForm onAddExpense={addExpense} editing={editing} />
+          
         </div>
 
         <div className="section">
           <h3 style={{ color: "#38bdf8" }}>Your Expenses</h3>
           <ExpenseTable
             expenses={expenses}
-            onDelete={handleDelete}
+            onDelete={deleteExpense}
             onEdit={handleEdit}
           />
         </div>
@@ -73,5 +90,3 @@ function Budget() {
     </div>
   );
 }
-
-export default Budget;

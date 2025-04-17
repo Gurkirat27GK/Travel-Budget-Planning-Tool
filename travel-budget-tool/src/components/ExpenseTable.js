@@ -20,7 +20,7 @@ function ExpenseTable({ expenses, onDelete, onEdit }) {
             <td>${exp.amount}</td>
             <td>{exp.category}</td>
             <td>
-              <button onClick={() => onEdit(exp.id)}>Edit</button>
+              <button onClick={() => onEdit(exp)}>Edit</button>
               <button onClick={() => onDelete(exp.id)}>Delete</button>
             </td>
           </tr>

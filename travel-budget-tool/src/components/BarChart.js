@@ -1,4 +1,3 @@
-// src/components/BarChart.js
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import {
@@ -13,14 +12,33 @@ import {
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const BarChart = () => {
+const BarChart = ({ expenses }) => {
+  // Group expenses by month and sum the amounts
+  const monthlyTotals = expenses.reduce((acc, expense) => {
+    const month = new Date(expense.date).toLocaleString("default", { month: "short" }); // Get the short month name (e.g., "Jan")
+    const amount = parseFloat(expense.amount);
+    
+    if (!acc[month]) {
+      acc[month] = 0;
+    }
+    
+    acc[month] += amount;
+    
+    return acc;
+  }, {});
+
+  // Prepare the data for the Bar chart
+  const months = Object.keys(monthlyTotals).sort(); // Sort months in order (optional)
+  const dataValues = months.map((month) => monthlyTotals[month]);
+  const backgroundColor = "#36A2EB"; // Set the background color for the bars
+
   const data = {
-    labels: ["Jan", "Feb", "Mar", "Apr"],
+    labels: months, // Months (e.g., "Jan", "Feb", "Mar")
     datasets: [
       {
-        label: "Sales",
-        data: [150, 200, 170, 220],
-        backgroundColor: "#36A2EB",
+        label: "Monthly Expenses",
+        data: dataValues, // Total expenses for each month
+        backgroundColor: backgroundColor, // Color for each bar
       },
     ],
   };
@@ -33,7 +51,12 @@ const BarChart = () => {
       },
       title: {
         display: true,
-        text: "Monthly Sales",
+        text: "Monthly Expenses",
+      },
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
       },
     },
   };
