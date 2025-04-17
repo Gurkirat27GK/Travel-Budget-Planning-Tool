@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import Budget from './pages/budget';
-import Reports from './pages/reports';
+import Reports from './pages/report';
 
 export default function App() {
   return (

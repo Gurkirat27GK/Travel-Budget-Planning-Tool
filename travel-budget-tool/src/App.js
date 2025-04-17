@@ -6,7 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/home';
 import Budget from './pages/budget';
-import Reports from './pages/reports';
+import Reports from './pages/report';
 import Login from './pages/login';
 import Signup from './pages/signup';
 
@@ -21,7 +21,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/budget" element={<Budget />} />
-            <Route path="/reports" element={<Reports />} />
+            <Route path="/report" element={<Reports />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
           </Routes>
