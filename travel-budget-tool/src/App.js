@@ -11,6 +11,7 @@ import Login from './pages/login';
 import Signup from './pages/signup';
 import Planner from './pages/Planner'
 
+
 import './index.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Routes>
 
             <Route path="/" element={<Home />} />
+            <Route path="/budget" element={<Budget/>}/>
             <Route path="/Planner" element={<Planner />} />
             <Route path="/reports" element={<Reports />} />
             <Route path="/login" element={<Login />} />
