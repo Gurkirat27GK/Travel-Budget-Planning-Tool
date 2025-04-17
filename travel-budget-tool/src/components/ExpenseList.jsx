@@ -1,19 +1,26 @@
-const ExpenseList = ({ expenses, onDelete, onEdit }) => {
+export default function ExpenseList({ expenses, onEdit, onDelete }) {
     return (
-      <ul className="space-y-2">
-        {expenses.map((exp, index) => (
-          <li key={index} className="flex justify-between items-center border p-2">
-            <div>
-              <p>{exp.date} - {exp.description} - ${exp.amount} - {exp.category}</p>
-            </div>
-            <div>
-              <button onClick={() => onEdit(exp)}>✏️</button>
-              <button onClick={() => onDelete(exp.id)}>🗑️</button>
-            </div>
-          </li>
-        ))}
-      </ul>
+      <table className="expense-table">
+        <thead>
+          <tr>
+            <th>Date</th><th>Description</th><th>Amount</th><th>Category</th><th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {expenses.map((exp, idx) => (
+            <tr key={idx}>
+              <td>{exp.date}</td>
+              <td>{exp.description}</td>
+              <td>${exp.amount}</td>
+              <td>{exp.category}</td>
+              <td>
+                <button onClick={() => onEdit(exp)}>Edit</button>
+                <button onClick={() => onDelete(exp.id)}>Delete</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     );
-  };
+  }
   
-  export default ExpenseList;

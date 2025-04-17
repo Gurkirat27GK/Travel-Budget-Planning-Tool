@@ -1,17 +1,14 @@
-const BudgetProgressBar = ({ spent, limit }) => {
-    const percent = Math.min((spent / limit) * 100, 100);
+export default function BudgetProgressBar({ totalBudget, expenses }) {
+    const spent = expenses.reduce((acc, exp) => acc + parseFloat(exp.amount), 0);
+    const percentage = (spent / totalBudget) * 100;
+  
     return (
-      <div className="mb-4">
-        <div className="bg-gray-200 h-4 w-full rounded">
-          <div
-            className="bg-green-500 h-4 rounded"
-            style={{ width: `${percent}%` }}
-          />
-        </div>
-        <p className="text-sm mt-1">{spent} / {limit}</p>
+      <div className="w-full bg-gray-200 rounded-full h-4 my-4">
+        <div
+          className="bg-blue-500 h-4 rounded-full"
+          style={{ width: `${Math.min(percentage, 100)}%` }}
+        ></div>
       </div>
     );
-  };
-  
-  export default BudgetProgressBar;
+  }
   

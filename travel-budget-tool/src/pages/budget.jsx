@@ -1,40 +1,34 @@
-import React, { useEffect, useState } from "react";
-import ExpenseForm from "../components/ExpenseForm";
-import ExpenseList from "../components/ExpenseList";
-import {
-  addExpense,
-  deleteExpense,
-  listenToExpenses,
-} from "../firebase/dbUtils";
+import { useEffect, useState } from 'react';
+import { db, ref, push, set, onValue, remove } from '../firebase/firebaseConfig';
+import ExpenseForm from '../components/ExpenseForm';
+import ExpenseList from '../components/ExpenseList';
 
-const tripID = "demoTrip123";
-
-const Budget = () => {
+export default function Budget() {
   const [expenses, setExpenses] = useState([]);
 
   useEffect(() => {
-    listenToExpenses(tripID, setExpenses);
+    const expensesRef = ref(db, 'expenses');
+    onValue(expensesRef, (snapshot) => {
+      const data = snapshot.val();
+      const loadedExpenses = data ? Object.entries(data).map(([id, val]) => ({ id, ...val })) : [];
+      setExpenses(loadedExpenses);
+    });
   }, []);
 
-  const handleAdd = async (expense) => {
-    await addExpense(tripID, expense);
+  const addExpense = async (expense) => {
+    const newRef = push(ref(db, 'expenses'));
+    await set(newRef, expense);
   };
 
-  const handleDelete = async (id) => {
-    await deleteExpense(tripID, id);
-  };
-
-  const handleEdit = (exp) => {
-    alert("Edit functionality will be completed on Day 3");
+  const deleteExpense = async (id) => {
+    await remove(ref(db, `expenses/${id}`));
   };
 
   return (
-    <div className="p-6">
-      <h2 className="text-xl font-bold mb-4">Travel Budget - Expense Tracker</h2>
-      <ExpenseForm onAdd={handleAdd} />
-      <ExpenseList expenses={expenses} onDelete={handleDelete} onEdit={handleEdit} />
+    <div>
+      <h2>Budget Page</h2>
+      <ExpenseForm onSubmit={addExpense} />
+      <ExpenseList expenses={expenses} onDelete={deleteExpense} />
     </div>
   );
-};
-
-export default Budget;
+}

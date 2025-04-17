@@ -1,25 +1,23 @@
-import React from "react";
-import PieChart from "../components/PieChart";
-import BarChart from "../components/BarChart";
+import { useEffect, useState } from 'react';
+import { db, ref, onValue } from '../firebase/firebaseConfig';
+import PieChart from '../components/PieChart';
 
-const Reports = () => {
+export default function Reports() {
+  const [expenses, setExpenses] = useState([]);
+
+  useEffect(() => {
+    const expensesRef = ref(db, 'expenses');
+    onValue(expensesRef, (snapshot) => {
+      const data = snapshot.val();
+      const list = data ? Object.entries(data).map(([id, val]) => ({ id, ...val })) : [];
+      setExpenses(list);
+    });
+  }, []);
+
   return (
-    <div style={{ padding: "2rem" }}>
-      <h2 style={{ marginBottom: "2rem" }}>Reports Dashboard</h2>
-
-      <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap" }}>
-        <div style={{ flex: 1, minWidth: "300px" }}>
-          <h3>Sales Overview</h3>
-          <BarChart />
-        </div>
-
-        <div style={{ flex: 1, minWidth: "300px" }}>
-          <h3>Market Share</h3>
-          <PieChart />
-        </div>
-      </div>
+    <div>
+      <h2>Reports</h2>
+      <PieChart expenses={expenses} />
     </div>
   );
-};
-
-export default Reports;
+}
