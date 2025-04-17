@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/planner.css'; // You can create a CSS file for styling
 
-function Budget() {
+function Planner() {
   return (
     <div className="budget-page">
       <h1>Smart Ways to Save Money While Traveling</h1>
@@ -104,3 +104,5 @@ function Budget() {
     </div>
   );
 }
+
+export default Planner;

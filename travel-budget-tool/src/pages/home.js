@@ -1,28 +1,31 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/home.css";
+import planner from "./Planner"
+import Budget from "./budget";
 
 
 function Home() {
   const navigate = useNavigate();
 
   const navigateToReports = () => {
-    navigate("/report"); 
+    navigate("/reports"); 
+  };
+
+  const navigateToStartPlanning = () => {
+    navigate("/Planner"); 
   };
 
   const navigateToTrack = () => {
-    navigate("/budget"); 
-  };
-  const navigateToTrack = () => {
-    navigate("/budget"); 
+    navigate("/Budget"); 
   };
 
   const navigateToCollaborativeBudget = () => {
-    navigate("/collaborative-budget");
+    navigate("/CollaborativeBudget");
   };
 
   const navigateToCurrencyConverter = () => {
-    navigate("/currency-converter");
+    navigate("/CurrencyConverter");
   };
 
   return (
@@ -33,18 +36,19 @@ function Home() {
           Plan smart, travel far. Manage your travel expenses with ease.
         </p>
 
-        <a href="/Planner" className="cta-button">Start Planning</a>
+        
       </div>
 
       {/* First Row - 3 Cards */}
       <section className="features">
         <div className="feature-card">
-          <img src="https://img.icons8.com/ios-filled/100/compass.png" alt="Plan" />
+          <img src="https://img.icons8.com/?size=100&id=9733&format=png&color=14089b" alt="Plan" />
           <h3>Plan</h3>
           <p>Set your budget goals before you travel.</p>
+          <button onClick={navigateToStartPlanning} className="cta-button">Start Planning</button>
         </div>
         <div className="feature-card">
-          <img src="https://img.icons8.com/ios-filled/100/wallet.png" alt="Track" />
+          <img src="https://img.icons8.com/?size=100&id=7991&format=png&color=14089b" alt="Track" />
           <h3>Track</h3>
           <p>Record and monitor your travel expenses in real-time.</p>
           <button onClick={navigateToTrack} className="cta-button">See Track</button>

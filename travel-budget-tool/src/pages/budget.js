@@ -41,7 +41,7 @@ function Budget() {
             marginBottom: "20px",
           }}
         >
-          TripWise
+          Gurkirat
         </h2>
 
         <div className="section" style={{ marginBottom: "30px" }}>

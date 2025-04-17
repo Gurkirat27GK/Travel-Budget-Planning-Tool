@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { db } from "../firebase"; // Firebase setup
 import { collection, doc, setDoc, onSnapshot } from "firebase/firestore";
 import "./collab.css";
-+
+
 
 function CollaborativeBudget() {
   const [collaborators, setCollaborators] = useState([]);

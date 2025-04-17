@@ -9,10 +9,11 @@ import Planner from './pages/Planner';
 import Reports from './pages/reports';
 import Login from './pages/login';
 import Signup from './pages/signup';
-import Planner from './pages/Planner'
-
-
 import './index.css';
+import Budget from './pages/budget';
+import CurrencyConverter from './pages/CurrencyConverter';
+import CollaborativeBudget from './pages/CollaborativeBudget';
+import Profile from './pages/profile';
 
 function App() {
   return (
@@ -22,10 +23,13 @@ function App() {
         <main>
           <Routes>
 
+            <Route path='/profile' element={<Profile/>}/>
             <Route path="/" element={<Home />} />
-            <Route path="/budget" element={<Budget/>}/>
+            <Route path='/budget' element={<Budget/>}/>
             <Route path="/Planner" element={<Planner />} />
             <Route path="/reports" element={<Reports />} />
+            <Route path='/CurrencyConverter' element={<CurrencyConverter/>}/>
+            <Route path='/CollaborativeBudget' element={<CollaborativeBudget/>}/>
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
           </Routes>
