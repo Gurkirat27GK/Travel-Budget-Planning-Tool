@@ -104,6 +104,3 @@ function Budget() {
     </div>
   );
 }
-
-export default Budget;
-
