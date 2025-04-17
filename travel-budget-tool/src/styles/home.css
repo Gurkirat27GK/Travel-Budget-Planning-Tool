@@ -2,7 +2,7 @@
     font-family: 'Segoe UI', sans-serif;
     text-align: center;
     padding: 2rem;
-    background: #f0fff4; /* soft minty background */
+    background: #caf3fb; /* soft minty background */
     min-height: 100vh;
   }
   
@@ -12,13 +12,13 @@
   
   .title {
     font-size: 3rem;
-    color: #2e7d32; /* deep green */
+    color: #14089b; /* deep green */
     margin-bottom: 0.5rem;
   }
   
   .subtitle {
     font-size: 1.2rem;
-    color: #4caf50; /* lighter green */
+    color: #14089b; /* lighter green */
     margin-bottom: 2rem;
   }
   
@@ -51,8 +51,8 @@
   .cta-button {
     margin-top: 1rem;
     display: inline-block;
-    background-color: #66bb6a; /* green CTA */
-    color: white;
+    background-color: #14089b; /* green CTA */
+    color: rgb(255, 255, 255);
     padding: 0.7rem 1.5rem;
     border-radius: 25px;
     text-decoration: none;
@@ -61,7 +61,7 @@
   }
   
   .cta-button:hover {
-    background-color: #388e3c;
+    background-color: rgb(0, 1, 1);
   }
   
   .features {
@@ -73,7 +73,8 @@
   }
   
   .feature-card {
-    background-color: white;
+    background-color: #ffffff;
+    color: #14089b;
     padding: 1.5rem;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 128, 0, 0.1);
@@ -87,6 +88,6 @@
   }
   
   .feature-card h3 {
-    color: #2e7d32;
+    color: #14089b;
     margin-bottom: 0.5rem;
   }

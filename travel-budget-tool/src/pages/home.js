@@ -22,17 +22,17 @@ function Home() {
 
       <section className="features">
         <div className="feature-card">
-          <img src="https://img.icons8.com/ios-filled/100/compass.png" alt="Plan" />
+          <img src="https://img.icons8.com/?size=100&id=9733&format=png&color=14089b" alt="Plan" />
           <h3>Plan</h3>
           <p>Set your budget goals before you travel.</p>
         </div>
         <div className="feature-card">
-          <img src="https://img.icons8.com/ios-filled/100/wallet.png" alt="Track" />
+          <img src="https://img.icons8.com/?size=100&id=7991&format=png&color=14089b" alt="Track" />
           <h3>Track</h3>
           <p>Record and monitor your travel expenses in real-time.</p>
         </div>
         <div className="feature-card">
-          <img src="https://img.icons8.com/ios-filled/100/pie-chart.png" alt="Report" />
+          <img src="https://img.icons8.com/?size=100&id=4GO5zf5NNU2k&format=png&color=14089b" alt="Report" />
           <h3>Report</h3>
           <p>Visualize where your money goes with charts.</p>
 
