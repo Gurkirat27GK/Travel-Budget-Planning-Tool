@@ -1,12 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/home.css";
+import "./home.css";
 
 function Home() {
   const navigate = useNavigate();
 
   const navigateToReports = () => {
-    navigate("/report"); // Navigate to the Reports page
+    navigate("/report"); 
+  };
+
+  const navigateToTrack = () => {
+    navigate("/budget"); 
   };
 
   return (
@@ -30,6 +34,8 @@ function Home() {
           <img src="https://img.icons8.com/ios-filled/100/wallet.png" alt="Track" />
           <h3>Track</h3>
           <p>Record and monitor your travel expenses in real-time.</p>
+          {/* Button to navigate to Track */}
+          <button onClick={navigateToTrack} className="cta-button">See Track</button>
         </div>
         <div className="feature-card">
           <img src="https://img.icons8.com/ios-filled/100/pie-chart.png" alt="Report" />
