@@ -5,11 +5,9 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/home';
 import Budget from './pages/budget';
-import Reports from './pages/report';
+import Reports from './pages/reports';
 import Login from './pages/login';
 import Signup from './pages/signup';
-
-import './index.css';
 
 function App() {
   return (

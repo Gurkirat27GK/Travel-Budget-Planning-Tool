@@ -16,3 +16,4 @@ const ExpenseList = ({ expenses, onDelete, onEdit }) => {
     );
   };
   
+  export default ExpenseList;

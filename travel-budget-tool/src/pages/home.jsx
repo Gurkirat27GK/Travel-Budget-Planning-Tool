@@ -6,7 +6,7 @@ function Home() {
   const navigate = useNavigate();
 
   const navigateToReports = () => {
-    navigate("/report"); // Navigate to the Reports page
+    navigate("/report"); 
   };
 
   return (
