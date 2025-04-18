@@ -31,20 +31,12 @@ function Footer() {
         <div className="footer-section">
           <h3>Quick Links</h3>
           <p>
-            <a href="index.html">Home</a
+            <a href="/">Home</a
             >
           </p>
           <p>
-            <a href="blog.html"
+            <a href="/blog"
               >Blog</a
-            >
-          </p>
-          <p>
-            <a href="#" >Workouts</a>
-          </p>
-          <p>
-            <a href="#" 
-              >Nutrition</a
             >
           </p>
           <p>
@@ -59,15 +51,15 @@ function Footer() {
           <div className="contact-info">
             <div className="contact-item">
               <span>📍</span>
-              <p>123 Fitness Street, Healthy City</p>
+              <p>#128 Subash nagar, New Delhi</p>
             </div>
             <div className="contact-item">
               <span>📞</span>
-              <p>+1 (123) 456-7890</p>
+              <p>+91 9929999991  </p>
             </div>
             <div className="contact-item">
               <span>✉</span>
-              <p>info@fitnessbuddy.com</p>
+              <p>info@tripwise.com</p>
             </div>
           </div>
         </div>
@@ -84,7 +76,7 @@ function Footer() {
       </div>
 
       <div className="copyright">
-        <p>&copy; 2025 Fitness Buddy. All Rights Reserved.</p>
+        <p>&copy; 2025 Travel Budget Buddy. All Rights Reserved.</p>
       </div>
     </footer>
   );

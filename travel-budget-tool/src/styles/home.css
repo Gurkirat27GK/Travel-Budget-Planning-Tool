@@ -180,7 +180,7 @@ body{
 
     .reviews {
       padding: 3rem 2rem;
-      background: #f8fafc;
+      /* background: #f8fafc; */
       color: #0f172a;
       text-align: center;
     }
@@ -188,7 +188,7 @@ body{
     .section-title {
       font-size: 2rem;
       margin-bottom: 2rem;
-      color: #14089b;
+      color: #fefefe;
     }
     
     .review-cards {
