@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+
 import "../styles/header.css";
 import Logo from "../assets/Logo.png";
 import { useAuth } from "../firebase/AuthContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase/firebaseConfig";
 
+
 function Header() {
+
+  const [showFeatures, setShowFeatures] = useState(false);
+
+  const toggleFeatures = () => {
+    setShowFeatures(!showFeatures);
+  };
+
   const { user } = useAuth();
   const navigate = useNavigate();
 
@@ -30,7 +39,25 @@ function Header() {
         <img src={Logo} alt="Travel Budgeting Logo" />
       </div>
 
-      <div className="auth-links">
+
+      {/* Features Dropdown */}
+      <div className="features-dropdown">
+        <button onClick={toggleFeatures} className="features-btn">
+          Features ▼
+        </button>
+        {showFeatures && (
+          <div className="dropdown-menu">
+            <Link to="/planner" onClick={() => setShowFeatures(false)}>Plan</Link>
+            <Link to="/budget" onClick={() => setShowFeatures(false)}>Track</Link>
+            <Link to="/reports" onClick={() => setShowFeatures(false)}>Report</Link>
+            <Link to="/converter" onClick={() => setShowFeatures(false)}>Converter</Link>
+            <Link to="/collaborative-budget" onClick={() => setShowFeatures(false)}>Collaborative Budgeting</Link>
+          </div>
+        )}
+      </div>
+
+      {/* Navigation and Auth Links */}
+<div className="auth-links">
         {!user ? (
           <>
             <Link to="/signup" className="auth-btn">Sign Up</Link>
