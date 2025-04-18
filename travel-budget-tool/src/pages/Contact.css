@@ -75,11 +75,11 @@
   }
   
   .contact-input-box {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   
   .contact-input {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -87,7 +87,7 @@
   }
   
   .contact-textarea {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -102,5 +102,5 @@
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    width: 100%;
+    width: 95%;
   }
