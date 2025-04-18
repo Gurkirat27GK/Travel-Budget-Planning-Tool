@@ -43,4 +43,43 @@
   .auth-btn:hover {
     background-color: #000f2a;
     color: white;
+  } 
+
+  .features-dropdown {
+    position: relative;
+    margin-right: 1rem;
   }
+  
+  .features-btn {
+    background: none;
+    color: #14089b;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    color: #14089b;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 999;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    color: #14089b;
+    transition: background 0.2s;
+  }
+  
+  .dropdown-menu a:hover {
+    background: #e0f2fe;
+  }
+  

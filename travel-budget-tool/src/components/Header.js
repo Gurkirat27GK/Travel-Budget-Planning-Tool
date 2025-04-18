@@ -7,17 +7,14 @@ import { useAuth } from "../firebase/AuthContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase/firebaseConfig";
 
-
 function Header() {
-
   const [showFeatures, setShowFeatures] = useState(false);
+  const { user } = useAuth();
+  const navigate = useNavigate();
 
   const toggleFeatures = () => {
     setShowFeatures(!showFeatures);
   };
-
-  const { user } = useAuth();
-  const navigate = useNavigate();
 
   const handleLogout = async () => {
     await signOut(auth);
@@ -38,26 +35,8 @@ function Header() {
       <div className="logo-container">
         <img src={Logo} alt="Travel Budgeting Logo" />
       </div>
-
-
-      {/* Features Dropdown */}
-      <div className="features-dropdown">
-        <button onClick={toggleFeatures} className="features-btn">
-          Features ▼
-        </button>
-        {showFeatures && (
-          <div className="dropdown-menu">
-            <Link to="/planner" onClick={() => setShowFeatures(false)}>Plan</Link>
-            <Link to="/budget" onClick={() => setShowFeatures(false)}>Track</Link>
-            <Link to="/reports" onClick={() => setShowFeatures(false)}>Report</Link>
-            <Link to="/converter" onClick={() => setShowFeatures(false)}>Converter</Link>
-            <Link to="/collaborative-budget" onClick={() => setShowFeatures(false)}>Collaborative Budgeting</Link>
-          </div>
-        )}
-      </div>
-
-      {/* Navigation and Auth Links */}
-<div className="auth-links">
+      {/* Auth Links */}
+      <div className="auth-links">
         {!user ? (
           <>
             <Link to="/signup" className="auth-btn">Sign Up</Link>
@@ -70,7 +49,12 @@ function Header() {
               alt="User Avatar"
               className="profile-avatar pt"
               onClick={() => navigate("/profile")}
-              style={{ cursor: "pointer", width: "40px", height: "40px", borderRadius: "50%" }}
+              style={{
+                cursor: "pointer",
+                width: "40px",
+                height: "40px",
+                borderRadius: "50%",
+              }}
             />
             <button onClick={handleLogout} className="auth-btn pt">Logout</button>
           </>
