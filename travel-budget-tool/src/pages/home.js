@@ -82,16 +82,11 @@ function Home() {
     <div className="home-container">
       {/* HERO SECTION WITH VIDEO BACKGROUND */}
       <div className="hero">
-        <video autoPlay muted loop className="background-video">
-          <source src="/videos/travel.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="overlay">
-          <h1 className="title">Travel Budget Planner</h1>
-          <p className="subtitle">
-            Plan smart, travel far. Manage your travel expenses with ease.
-          </p>
-        </div>
+        <h1 className="title">Travel Budget Planner</h1>
+        <p className="subtitle">
+          Plan smart, travel far. Manage your travel expenses with ease.
+        </p>
+        
       </div>
 
       {/* FEATURE CARDS SECTION 1 */}

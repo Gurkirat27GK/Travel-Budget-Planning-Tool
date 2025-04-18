@@ -1,10 +1,8 @@
-src/pages/home.css
 .home-container {
   font-family: 'Segoe UI', sans-serif;
   text-align: center;
-  /* padding: 2rem; */
-  background: #0f172a; /* dark slate background */
-  color: #e2e8f0; /* light text */
+  background: #0f172a;
+  color: #e2e8f0; 
   min-height: 100vh;
 }
 
@@ -14,14 +12,14 @@ src/pages/home.css
 
 .title {
   font-size: 3rem;
-  color: #00f2ff; /* neon cyan */
+  color: #00f2ff; 
   margin-bottom: 0.5rem;
   text-shadow: 0 0 10px #00f2ff;
 }
 
 .subtitle {
   font-size: 1.2rem;
-  color: #7dd3fc; /* soft blue-cyan */
+  color: #7dd3fc; 
   margin-bottom: 2rem;
 }
 
@@ -77,16 +75,11 @@ src/pages/home.css
   margin-bottom: 0.5rem;
 }
 
-
-/* src/pages/home.css */
 .home-container {
       font-family: 'Segoe UI', sans-serif;
       text-align: center;
       padding: 2rem;
-      /* background: #caf3fb; soft minty background */
-      /* background-image: url("../assets/airplaneOverSea.jpg") ; */
       background-image: image-set("../assets/airplaneOverSea.jpg");
-      /* background:src("../assets/airplaneOverSea.jpg"); */
       background-size: cover;
       min-height: 100vh;
     }
@@ -97,13 +90,13 @@ src/pages/home.css
     
     .title {
       font-size: 3rem;
-      color: #14089b; /* deep green */
+      color: #14089b;
       margin-bottom: 0.5rem;
     }
     
     .subtitle {
       font-size: 1.2rem;
-      color: #14089b; /* lighter green */
+      color: #14089b;
       margin-bottom: 2rem;
     }
     
@@ -119,16 +112,16 @@ src/pages/home.css
       font-size: 1rem;
       border: none;
       background-color: white;
-      color: #388e3c; /* green text */
+      color: #388e3c; 
       border-radius: 30px;
       font-weight: bold;
       cursor: pointer;
-      border: 2px solid #81c784; /* light green border */
+      border: 2px solid #81c784; 
       transition: all 0.3s ease;
     }
     
     .auth-button:hover {
-      background-color: #a5d6a7; /* light green background on hover */
+      background-color: #a5d6a7; 
       color: white;
       transform: translateY(-2px);
     }
@@ -136,7 +129,7 @@ src/pages/home.css
     .cta-button {
       margin-top: 1rem;
       display: inline-block;
-      background-color: #14089b; /* green CTA */
+      background-color: #14089b; 
       color: rgb(255, 255, 255);
       padding: 0.7rem 1.5rem;
       border-radius: 25px;

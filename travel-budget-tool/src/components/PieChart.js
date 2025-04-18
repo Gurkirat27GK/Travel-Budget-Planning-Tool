@@ -1,4 +1,3 @@
-// src/components/PieChart.js
 import React from "react";
 import { Pie } from "react-chartjs-2";
 import {
@@ -10,14 +9,29 @@ import {
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const PieChart = () => {
+const PieChart = ({ expenses }) => {
+  // Group expenses by category and sum the amounts
+  const categoryTotals = expenses.reduce((acc, expense) => {
+    const { category, amount } = expense;
+    acc[category] = acc[category] || 0;
+    acc[category] += parseFloat(amount);
+    return acc;
+  }, {});
+
+  // Prepare the data for the Pie chart
+  const labels = Object.keys(categoryTotals);
+  const dataValues = Object.values(categoryTotals);
+  const backgroundColors = [
+    "#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#FF9F40", "#9966FF"
+  ]; // Add more colors as needed
+
   const data = {
-    labels: ["Red", "Blue", "Yellow"],
+    labels: labels,
     datasets: [
       {
-        label: "Votes",
-        data: [12, 19, 3],
-        backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+        label: "Expense by Category",
+        data: dataValues,
+        backgroundColor: backgroundColors.slice(0, labels.length),
       },
     ],
   };
