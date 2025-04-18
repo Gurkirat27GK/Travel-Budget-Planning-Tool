@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/home.css";
 import MapSection from "../components/MapSection";
+import Goals from "./goals";
 
 function Home() {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ function Home() {
   const navigateToReports = () => navigate("/reports");
   const navigateToStartPlanning = () => navigate("/Planner");
   const navigateToTrack = () => navigate("/Budget");
-  const navigateToCollaborativeBudget = () => navigate("/CollaborativeBudget");
+  const navigateToBudget = () => navigate("/Goals");
   const navigateToCurrencyConverter = () => navigate("/CurrencyConverter");
 
   return (
@@ -50,7 +51,7 @@ function Home() {
       {/* FEATURE CARDS SECTION 2 */}
       <section className="features">
         <div className="feature-card">
-          <img src="https://img.icons8.com/ios-filled/100/currency-exchange.png" alt="Converter" />
+          <img src="https://img.icons8.com/?size=100&id=7748&format=png&color=14089b" alt="Converter" />
           <h3>Currency Converter</h3>
           <p>Convert your expenses in real-time with accurate exchange rates.</p>
           <button onClick={navigateToCurrencyConverter} className="cta-button">Convert Now</button>
@@ -58,9 +59,9 @@ function Home() {
 
         <div className="feature-card">
           <img src="https://img.icons8.com/ios-filled/100/group-foreground-selected.png" alt="Collaborate" />
-          <h3>Collaborative Budgeting</h3>
-          <p>Work together with your travel companions to track shared expenses.</p>
-          <button onClick={navigateToCollaborativeBudget} className="cta-button">Collaborate</button>
+          <h3>Budget Goals</h3>
+          <p>Set Limits, Stay on Track – Budget Smarter for Every Journey.</p>
+          <button onClick={navigateToBudget} className="cta-button">Goals</button>
         </div>
       </section>
 

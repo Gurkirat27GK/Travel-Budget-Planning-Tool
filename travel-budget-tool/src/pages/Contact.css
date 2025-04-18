@@ -1,11 +1,17 @@
 .contact-section {
     padding: 40px 20px;
-    background-color: black;
+    background-color: #0f1829;
   }
   
   .contact-container {
     max-width: 960px;
     margin: 0 auto;
+  }
+  
+  .contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   
   .contact-info {
@@ -17,7 +23,8 @@
   .contact-info-title {
     display: block;
     margin-bottom: 10px;
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: bold;
     color: #15e8f6;
   }
   
@@ -75,19 +82,19 @@
   }
   
   .contact-input-box {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   
   .contact-input {
-    width: 90%;
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
   }
   
   .contact-textarea {
-    width: 90%;
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -100,7 +107,7 @@
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
-    width: 95%;
+    width: 100%;
   }
