@@ -51,7 +51,7 @@ function Home() {
       {/* FEATURE CARDS SECTION 2 */}
       <section className="features">
         <div className="feature-card">
-          <img src="https://img.icons8.com/ios-filled/100/currency-exchange.png" alt="Converter" />
+          <img src="https://img.icons8.com/?size=100&id=7748&format=png&color=14089b" alt="Converter" />
           <h3>Currency Converter</h3>
           <p>Convert your expenses in real-time with accurate exchange rates.</p>
           <button onClick={navigateToCurrencyConverter} className="cta-button">Convert Now</button>
