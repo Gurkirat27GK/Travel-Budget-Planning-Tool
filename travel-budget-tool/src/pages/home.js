@@ -28,21 +28,21 @@ function Home() {
       <section className="features">
         <div className="feature-card">
           <img src="https://img.icons8.com/?size=100&id=9733&format=png&color=14089b" alt="Plan" />
-          <h3>Plan</h3>
-          <p>Set your budget goals before you travel.</p>
+          <h2>Plan</h2>
+          <p >Set your budget goals before you travel.</p>
           <button onClick={navigateToStartPlanning} className="cta-button">Start Planning</button>
         </div>
 
         <div className="feature-card">
           <img src="https://img.icons8.com/?size=100&id=7991&format=png&color=14089b" alt="Track" />
-          <h3>Track</h3>
+          <h2>Track</h2>
           <p>Record and monitor your travel expenses in real-time.</p>
           <button onClick={navigateToTrack} className="cta-button">See Track</button>
         </div>
 
         <div className="feature-card">
           <img src="https://img.icons8.com/?size=100&id=4GO5zf5NNU2k&format=png&color=14089b" alt="Report" />
-          <h3>Report</h3>
+          <h2>Report</h2>
           <p>Visualize where your money goes with charts.</p>
           <button onClick={navigateToReports} className="cta-button">See Reports</button>
         </div>
@@ -52,7 +52,7 @@ function Home() {
       <section className="features">
         <div className="feature-card">
           <img src="https://img.icons8.com/?size=100&id=7748&format=png&color=14089b" alt="Converter" />
-          <h3>Currency Converter</h3>
+          <h2>Currency Converter</h2>
           <p>Convert your expenses in real-time with accurate exchange rates.</p>
           <button onClick={navigateToCurrencyConverter} className="cta-button">Convert Now</button>
         </div>
@@ -60,7 +60,7 @@ function Home() {
         <div className="feature-card">
           <img src="https://img.icons8.com/ios-filled/100/group-foreground-selected.png" alt="Goals" />
           <h3>Budget Goals</h3>
-          <p>Set Limits, Stay on Track – Budget Smarter for Every Journey.</p>
+          <p>Set Limits, Stay on Track - Budget Smarter for Every Journey.</p>
           <button onClick={navigateToBudget} className="cta-button">Goals</button>
         </div>
       </section>

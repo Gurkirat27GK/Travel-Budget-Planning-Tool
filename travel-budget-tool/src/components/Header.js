@@ -35,8 +35,30 @@ function Header() {
       <div className="logo-container">
         <img src={Logo} alt="Travel Budgeting Logo" />
       </div>
-      {/* Auth Links */}
-      <div className="auth-links">
+
+
+      {/* Features Dropdown */}
+      {/* Features Dropdown */}
+<div
+className="dropdown"
+onMouseEnter={() => setShowFeatures(true)}
+onMouseLeave={() => setShowFeatures(false)}
+>
+<button className="dropbtn">Features ▼</button>
+{showFeatures && (
+  <div className="dropdown-content">
+    <Link to="/planner" onClick={() => setShowFeatures(false)}>Plan</Link>
+    <Link to="/budget" onClick={() => setShowFeatures(false)}>Track</Link>
+    <Link to="/reports" onClick={() => setShowFeatures(false)}>Report</Link>
+    <Link to="/converter" onClick={() => setShowFeatures(false)}>Converter</Link>
+    <Link to="/collaborative-budget" onClick={() => setShowFeatures(false)}>Collaborative Budgeting</Link>
+  </div>
+)}
+</div>
+
+
+      {/* Navigation and Auth Links */}
+<div className="auth-links">
         {!user ? (
           <>
             <Link to="/signup" className="auth-btn">Sign Up</Link>
