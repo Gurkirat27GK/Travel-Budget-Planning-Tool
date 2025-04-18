@@ -9,6 +9,7 @@ import { auth } from "../firebase/firebaseConfig";
 
 function Header() {
   const [showFeatures, setShowFeatures] = useState(false);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { user } = useAuth();
   const navigate = useNavigate();
 
@@ -28,30 +29,75 @@ function Header() {
 
   return (
     <header className="header-container">
-      {/* Logo + Home Button */}
-      <div className="logo-container" style={{ cursor: "pointer" }} onClick={() => navigate("/")}>
-        <img src={Logo} alt="Travel Budgeting Logo" />
+      {/* Logo + Hamburger */}
+      <div className="logo-hamburger">
+        <div 
+          className="logo-container" 
+          style={{ cursor: "pointer" }} 
+          onClick={() => navigate("/")}
+          >
+          <img src={Logo} alt="Travel Budgeting Logo" />
+        </div>
+
+        {/* Hamburger Icon */}
+        <div
+          className="hamburger"
+          onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
       </div>
 
-      {/* Nav Links: Home + Blog + Features */}
-      <div className="nav-links">
-        <Link to="/" className="nav-btn">Home</Link>
-        <Link to="/blog" className="nav-btn">Blog</Link>
-        <Link to="/contact" className="nav-btn">Contact Us</Link>
+      {/* Nav Links */}
+      <div className={`nav-links ${isMobileMenuOpen ? "mobile-open" : ""}`}>
+        <Link 
+          to="/" 
+          className="nav-btn" 
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          Home
+        </Link>
+        <Link 
+          to="/blog" 
+          className="nav-btn" 
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          Blog
+        </Link>
+        <Link 
+          to="/contact" 
+          className="nav-btn" 
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          Contact Us
+        </Link>
 
         <div
           className="dropdown"
+          style={{ marginTop: -25, top: "100%" }}
           onMouseEnter={() => setShowFeatures(true)}
           onMouseLeave={() => setShowFeatures(false)}
         >
-          <button className="dropbtn">Features </button>
+          <button className="nav-btn dropbtn">Features</button>
           {showFeatures && (
-            <div className="dropdown-content">
-              <Link to="/planner" onClick={() => setShowFeatures(false)}>Plan</Link>
-              <Link to="/budget" onClick={() => setShowFeatures(false)}>Track</Link>
-              <Link to="/reports" onClick={() => setShowFeatures(false)}>Report</Link>
-              <Link to="/converter" onClick={() => setShowFeatures(false)}>Converter</Link>
-              <Link to="/collaborative-budget" onClick={() => setShowFeatures(false)}>Collaborative Budgeting</Link>
+            <div className="dropdown-content" >
+              <Link to="/planner" onClick={() => setShowFeatures(false)}>
+              Plan
+              </Link>
+              <Link to="/budget" onClick={() => setShowFeatures(false)}>
+              Track
+              </Link>
+              <Link to="/reports" onClick={() => setShowFeatures(false)}>
+              Report
+              </Link>
+              <Link to="/converter" onClick={() => setShowFeatures(false)}>
+              Converter
+              </Link>
+              <Link to="/Goals" onClick={() => setShowFeatures(false)}>
+              Budget Goals
+              </Link>
             </div>
           )}
         </div>
@@ -87,5 +133,3 @@ function Header() {
 }
 
 export default Header;
-
-
