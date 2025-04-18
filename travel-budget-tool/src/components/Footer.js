@@ -10,22 +10,6 @@ function Footer() {
           <p>
           Tripwise helps travelers plan, <br/>track, and manage their trip <br/>expenses with ease. From <br/>setting budget goals to monitoring <br/>real-time spending, we make <br/>travel smarter and stress-free.
           </p>
-          <div classNameName="social-links">
-            <div className="social-icons">
-              <a href="https://facebook.com" target="_blank"
-                ><i className="fa fa-facebook"></i
-              ></a>
-              <a href="https://instagram.com" target="_blank"
-                ><i className="fa fa-instagram"></i
-              ></a>
-              <a href="https://twitter.com" target="_blank"
-                ><i className="fa fa-twitter"></i
-              ></a>
-              <a href="https://youtube.com" target="_blank"
-                ><i className="fa fa-youtube"></i
-              ></a>
-            </div>
-          </div>
         </div>
 
         <div className="footer-section">
@@ -40,8 +24,8 @@ function Footer() {
             >
           </p>
           <p>
-            <a href="#" 
-              >Privacy Policy</a
+            <a href="/Contact" 
+              >Contact Us</a
             >
           </p>
         </div>
@@ -51,15 +35,15 @@ function Footer() {
           <div className="contact-info">
             <div className="contact-item">
               <span>📍</span>
-              <p>#128 Subash nagar, New Delhi</p>
+              <p>#128 Subash Nagar, New Delhi</p>
             </div>
             <div className="contact-item">
               <span>📞</span>
-              <p>+91 9929999991  </p>
+              <p>+91 9929999991</p>
             </div>
             <div className="contact-item">
               <span>✉</span>
-              <p>info@tripwise.com</p>
+              <p>tripwise.support@gmail.com</p>
             </div>
           </div>
         </div>

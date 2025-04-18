@@ -19,9 +19,10 @@ function Blog() {
 
         <h2>🌟 Why Budgeting is Essential</h2>
         <p>Stay in control of your trip by managing your expenses, making smarter decisions, and avoiding overspending.</p>
+        <br/>
 
         <div className="image-container">
-          <img src="https://images.unsplash.com/photo-1502920917128-1aa500764b8b?fit=crop&w=900&q=80" alt="Travel Planning" />
+          <img src="https://media.istockphoto.com/id/656138678/photo/travel-planning-concept-on-map.jpg?s=612x612&w=0&k=20&c=knSQvSoQxdnrCBdvbWqDzA_zUeBetUmnXBUqe8iPDAA=" alt="Travel Planning" />
         </div>
         <br/>
 

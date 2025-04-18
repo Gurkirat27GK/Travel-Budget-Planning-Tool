@@ -17,31 +17,27 @@ function Home() {
   <source src={sample} type='0418.mp4' />
 </video>
 
-
-
   return (
     <div className="home-container">
       {/* HERO SECTION WITH VIDEO BACKGROUND */}
-      <div className="hero">
+      {/* <div className="hero">
         <h1 className="title">Travel Budget Planner</h1>
         <p className="subtitle">
           Plan smart, travel far. Manage your travel expenses with ease.
         </p>
         
-      </div>
+      </div> */}
       {/* VIDEO SECTION */}
-<section className="video-container">
-  <div className="video-text">
+<section className="video-fullwidth-section">
+  <video className="video-fullwidth-bg" autoPlay loop muted>
+    <source src={sample} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div className="video-overlay-text">
     <h2>Travel Moments That Inspire</h2>
     <p>
       Watch your travel dreams come to life. From planning to tracking, TripWise supports every step of your journey.
     </p>
-  </div>
-  <div className="video-box">
-    <video className="video-element" autoPlay loop muted>
-      <source src={sample} type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
   </div>
 </section>
       {/* FEATURE CARDS SECTION 1 */}

@@ -1,5 +1,5 @@
-import React from "react";
-import "../styles/Contact.css"; 
+import React, { useState } from "react";
+import "../styles/Contact.css";
 
 const ContactInputBox = ({ type, name, placeholder }) => {
   return (
@@ -9,52 +9,64 @@ const ContactInputBox = ({ type, name, placeholder }) => {
         name={name}
         placeholder={placeholder}
         className="contact-input"
+        required
       />
     </div>
   );
 };
 
-const ContactTextArea = ({ row, name, placeholder, defaultValue }) => {
+const ContactTextArea = ({ row, name, placeholder }) => {
   return (
     <div className="contact-input-box">
       <textarea
         rows={row}
         placeholder={placeholder}
         name={name}
-        defaultValue={defaultValue}
         className="contact-textarea"
+        required
       ></textarea>
     </div>
   );
 };
 
 const Contact = () => {
+  const [messageVisible, setMessageVisible] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Show thank you message
+    setMessageVisible(true);
+
+    // Optional: Clear the form manually
+    e.target.reset();
+
+    // Hide after 5 seconds
+    setTimeout(() => {
+      setMessageVisible(false);
+    }, 5000);
+  };
+
   return (
     <section className="contact-section">
       <div className="contact-container">
         <div className="contact-wrapper">
           <div className="contact-info">
-            <span className="contact-info-title">
-              Contact Us
-            </span>
-            <h2 className="contact-info-heading">
-              GET IN TOUCH WITH US
-            </h2>
+            <span className="contact-info-title">Contact Us</span>
+            <h2 className="contact-info-heading">GET IN TOUCH WITH US</h2>
             <p className="contact-info-text">
               Have questions about managing your travel budget? Need assistance with
               our planning tool or want to share feedback? Reach out to us! We're
               here to help you make the most of your travel expenses.
             </p>
+
             <div className="contact-info-item">
               <div className="contact-info-icon-container">
                 <span className="contact-info-icon">&#128205;</span>
               </div>
               <div className="contact-info-details">
                 <h4>Our Location</h4>
-                <p>
-                  We operate online to assist you
-                  with your travel budget planning.
-                </p>
+                <p>We operate online to assist you with your travel budget planning.</p>
               </div>
             </div>
 
@@ -77,24 +89,25 @@ const Contact = () => {
               </div>
               <div className="contact-info-details">
                 <h4>Email Address</h4>
-                <p>
-                  travel.budget.support@example.com
-                </p>
+                <p>tripwise.support@gmail.com</p>
               </div>
             </div>
           </div>
-          <div className="contact-form">
+
+          <form className="contact-form" onSubmit={handleSubmit}>
             <ContactInputBox type="text" name="name" placeholder="Your Name" />
             <ContactInputBox type="email" name="email" placeholder="Your Email" />
             <ContactInputBox type="text" name="subject" placeholder="Subject" />
             <ContactTextArea row="5" name="message" placeholder="Your Message" />
-            <button
-              type="submit"
-              className="contact-button"
-            >
+            <button type="submit" className="contact-button">
               Send Message
             </button>
-          </div>
+            {messageVisible && (
+              <p className="form-message">
+                Thank you! We'll get back to you shortly.
+              </p>
+            )}
+          </form>
         </div>
       </div>
     </section>
