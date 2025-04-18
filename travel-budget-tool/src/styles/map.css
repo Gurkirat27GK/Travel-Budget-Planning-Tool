@@ -20,13 +20,14 @@
   
   .map-text h2 {
     font-size: 2rem;
-    text-shadow: 0 0 10px #14089b;
+    text-shadow: 0 0 10px #ffffff;
   }
   
   .map-text p {
     font-size: 1.1rem;
-    color: #0a0a23;
-    text-shadow: 0 0 8px #b0b8ff;
+    color: #040125;
+    font-weight: 10px;
+    text-shadow: 0 0 10px #ffffff;
   }
   
   .map-box {

@@ -1,7 +1,11 @@
+body{
+  margin: 0;
+  padding: 0;
+}
 .home-container {
   font-family: 'Segoe UI', sans-serif;
   text-align: center;
-  background: #0f172a;
+  width: auto;
   color: #e2e8f0; 
   min-height: 100vh;
 }
@@ -79,7 +83,7 @@
       font-family: 'Segoe UI', sans-serif;
       text-align: center;
       padding: 2rem;
-      background-color: #cbf3fb;
+      background-image: image-set("../assets/airplaneOverSea.jpg");
       background-size: cover;
       min-height: 100vh;
     }
@@ -168,6 +172,10 @@
     .feature-card h2 {
       color: #14089b;
       margin-bottom: 0.5rem;
+    }
+
+    .feature-card p{
+      color: #4538ce;
     }
 
     .reviews {
