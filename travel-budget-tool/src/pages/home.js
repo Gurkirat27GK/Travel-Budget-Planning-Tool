@@ -78,7 +78,7 @@ function Home() {
         </div>
 
         <div className="feature-card">
-          <img src="https://img.icons8.com/ios-filled/100/group-foreground-selected.png" alt="Goals" />
+          <img src="https://img.icons8.com/?size=100&id=115319&format=png&color=14089b" alt="Goals" />
           <h3>Budget Goals</h3>
           <p>Set Limits, Stay on Track - Budget Smarter for Every Journey.</p>
           <button onClick={navigateToBudget} className="cta-button">Goals</button>
