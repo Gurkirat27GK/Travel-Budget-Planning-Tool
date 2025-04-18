@@ -70,7 +70,7 @@
   filter: brightness(1.2);
 }
 
-.feature-card h3 {
+.feature-card h2 {
   color: #00f2ff;
   margin-bottom: 0.5rem;
 }
@@ -79,7 +79,7 @@
       font-family: 'Segoe UI', sans-serif;
       text-align: center;
       padding: 2rem;
-      background-image: image-set("../assets/airplaneOverSea.jpg");
+      background-color: #cbf3fb;
       background-size: cover;
       min-height: 100vh;
     }
@@ -165,7 +165,11 @@
       margin-bottom: 1rem;
     }
     
-    .feature-card h3 {
+    .feature-card h2 {
       color: #14089b;
       margin-bottom: 0.5rem;
+    }
+
+    .feature-card p{
+      color: #675dd7;
     }
