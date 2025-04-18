@@ -79,5 +79,4 @@ for map section
 
 npm install leaflet
 
-
 npm install leaflet-routing-machine

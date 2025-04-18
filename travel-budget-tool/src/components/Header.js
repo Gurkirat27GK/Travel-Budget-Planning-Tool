@@ -7,17 +7,14 @@ import { useAuth } from "../firebase/AuthContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase/firebaseConfig";
 
-
 function Header() {
-
   const [showFeatures, setShowFeatures] = useState(false);
+  const { user } = useAuth();
+  const navigate = useNavigate();
 
   const toggleFeatures = () => {
     setShowFeatures(!showFeatures);
   };
-
-  const { user } = useAuth();
-  const navigate = useNavigate();
 
   const handleLogout = async () => {
     await signOut(auth);
@@ -74,7 +71,12 @@ onMouseLeave={() => setShowFeatures(false)}
               alt="User Avatar"
               className="profile-avatar pt"
               onClick={() => navigate("/profile")}
-              style={{ cursor: "pointer", width: "40px", height: "40px", borderRadius: "50%" }}
+              style={{
+                cursor: "pointer",
+                width: "40px",
+                height: "40px",
+                borderRadius: "50%",
+              }}
             />
             <button onClick={handleLogout} className="auth-btn pt">Logout</button>
           </>

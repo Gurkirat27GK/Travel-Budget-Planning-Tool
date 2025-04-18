@@ -9,6 +9,7 @@ import Login from './pages/login';
 import Signup from './pages/signup';
 import './index.css';
 import Budget from './pages/budget';
+import Goals from './pages/goals';
 import CurrencyConverter from './pages/CurrencyConverter';
 import Profile from './pages/profile';
 import { useAuth } from "./firebase/AuthContext";
@@ -32,6 +33,7 @@ function App() {
             <Route path="/Planner" element={<ProtectedRoute><Planner /></ProtectedRoute>} />
             <Route path="/reports" element={<ProtectedRoute><Reports /></ProtectedRoute>} />
             <Route path='/CurrencyConverter' element={<ProtectedRoute><CurrencyConverter/></ProtectedRoute>}/>
+            <Route path='/goals' element={<ProtectedRoute><Goals/></ProtectedRoute>}/>
           </Routes>
         </main>
         <Footer />
