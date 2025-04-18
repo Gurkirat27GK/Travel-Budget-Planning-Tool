@@ -1,17 +1,11 @@
 .contact-section {
     padding: 40px 20px;
-    background-color: #0f1829;
+    background-color: black;
   }
   
   .contact-container {
     max-width: 960px;
     margin: 0 auto;
-  }
-  
-  .contact-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
   
   .contact-info {
@@ -23,8 +17,7 @@
   .contact-info-title {
     display: block;
     margin-bottom: 10px;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 15px;
     color: #15e8f6;
   }
   
