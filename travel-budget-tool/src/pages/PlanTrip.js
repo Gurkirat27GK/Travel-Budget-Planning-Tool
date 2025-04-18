@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./plantrip.css"; // Create this CSS file for styles
+import "../styles/plantrip.css"; 
 
 function PlanTrip() {
   const [tripData, setTripData] = useState({

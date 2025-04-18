@@ -35,8 +35,7 @@ function Home() {
         <p className="subtitle">
           Plan smart, travel far. Manage your travel expenses with ease.
         </p>
-
-        
+      
       </div>
 
       {/* First Row - 3 Cards */}
