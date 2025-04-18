@@ -52,7 +52,7 @@ const Contact = () => {
               <div className="contact-info-details">
                 <h4>Our Location</h4>
                 <p>
-                  This is a demo application. We operate online to assist you
+                  We operate online to assist you
                   with your travel budget planning.
                 </p>
               </div>
