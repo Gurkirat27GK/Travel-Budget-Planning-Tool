@@ -14,6 +14,8 @@ import CurrencyConverter from './pages/CurrencyConverter';
 import Profile from './pages/profile';
 import { useAuth } from "./firebase/AuthContext";
 import ProtectedRoute from './components/ProtectedRoute';
+import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
 
 function App() {
 
@@ -34,6 +36,8 @@ function App() {
             <Route path="/reports" element={<ProtectedRoute><Reports /></ProtectedRoute>} />
             <Route path='/CurrencyConverter' element={<ProtectedRoute><CurrencyConverter/></ProtectedRoute>}/>
             <Route path='/goals' element={<ProtectedRoute><Goals/></ProtectedRoute>}/>
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
         <Footer />

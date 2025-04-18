@@ -14,8 +14,9 @@ function Home() {
   const navigateToCurrencyConverter = () => navigate("/CurrencyConverter");
 
   <video className='videoTag' autoPlay loop muted>
-    <source src={sample} type='.mp4' />
-  </video>
+  <source src={sample} type='0418.mp4' />
+</video>
+
 
 
   return (
@@ -28,7 +29,21 @@ function Home() {
         </p>
         
       </div>
-
+      {/* VIDEO SECTION */}
+<section className="video-container">
+  <div className="video-text">
+    <h2>Travel Moments That Inspire</h2>
+    <p>
+      Watch your travel dreams come to life. From planning to tracking, TripWise supports every step of your journey.
+    </p>
+  </div>
+  <div className="video-box">
+    <video className="video-element" autoPlay loop muted>
+      <source src={sample} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
       {/* FEATURE CARDS SECTION 1 */}
       <section className="features">
         <div className="feature-card">
@@ -69,6 +84,7 @@ function Home() {
           <button onClick={navigateToBudget} className="cta-button">Goals</button>
         </div>
       </section>
+      
 
       {/* MAP SECTION */}
       <MapSection />

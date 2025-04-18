@@ -1,65 +1,54 @@
-
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    padding: 0 1.5rem;
-    background-color: #070068; 
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
-  }
-
-  .pt{
-    margin: 5px;
-  }
-  
-  .logo-container{
-    width: 30%;
-    font-size: 1.8rem;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-  }
-
-  img{
-    width: 40%;
-  }
-  
-  .auth-links {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .auth-btn {
-    background-color: #caf3fb;
-    color: #14089b;
-    
-    padding: 0.5rem 1.2rem;
-    border-radius: 20px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.3s ease;
-  }
-  
-  .auth-btn:hover {
-    background-color: #000f2a;
-    color: white;
-  }
-
-
-  
-  /* Dropdown Styles */
-.dropdown {
-  position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  background-color: #070068; 
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 }
 
+.logo-container {
+  width: 30%;
+  cursor: pointer;
+}
+
+.logo-container img {
+  width: 40%;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-grow: 2;
+  flex-wrap: nowrap;     
+  white-space: nowrap;
+}
+
+.nav-btn,
+.blog-btn,
 .dropbtn {
   background-color: transparent;
-  color: white;
-  border: none;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
   font-size: 16px;
-  cursor: pointer;
   padding: 14px 16px;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-btn:hover,
+.blog-btn:hover,
+.dropbtn:hover {
+  color: #38bdf8;
+  background-color: transparent;
+}
+
+.dropdown {
+  position: relative;
 }
 
 .dropdown-content {
@@ -83,6 +72,32 @@
   color: black;
 }
 
-.dropdown:hover .dropbtn {
-  color: #007bff;
+.auth-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.auth-btn {
+  background-color: #caf3fb;
+  color: #14089b;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.auth-btn:hover {
+  background-color: #000f2a;
+  color: white;
+}
+
+.pt {
+  margin: 5px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+  }
 }

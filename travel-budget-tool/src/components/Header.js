@@ -12,10 +12,6 @@ function Header() {
   const { user } = useAuth();
   const navigate = useNavigate();
 
-  const toggleFeatures = () => {
-    setShowFeatures(!showFeatures);
-  };
-
   const handleLogout = async () => {
     await signOut(auth);
     navigate("/login");
@@ -32,33 +28,37 @@ function Header() {
 
   return (
     <header className="header-container">
-      <div className="logo-container">
+      {/* Logo + Home Button */}
+      <div className="logo-container" style={{ cursor: "pointer" }} onClick={() => navigate("/")}>
         <img src={Logo} alt="Travel Budgeting Logo" />
       </div>
 
+      {/* Nav Links: Home + Blog + Features */}
+      <div className="nav-links">
+        <Link to="/" className="nav-btn">Home</Link>
+        <Link to="/blog" className="nav-btn">Blog</Link>
+        <Link to="/contact" className="nav-btn">Contact Us</Link>
 
-      {/* Features Dropdown */}
-      {/* Features Dropdown */}
-<div
-className="dropdown"
-onMouseEnter={() => setShowFeatures(true)}
-onMouseLeave={() => setShowFeatures(false)}
->
-<button className="dropbtn">Features ▼</button>
-{showFeatures && (
-  <div className="dropdown-content">
-    <Link to="/planner" onClick={() => setShowFeatures(false)}>Plan</Link>
-    <Link to="/budget" onClick={() => setShowFeatures(false)}>Track</Link>
-    <Link to="/reports" onClick={() => setShowFeatures(false)}>Report</Link>
-    <Link to="/converter" onClick={() => setShowFeatures(false)}>Converter</Link>
-    <Link to="/collaborative-budget" onClick={() => setShowFeatures(false)}>Collaborative Budgeting</Link>
-  </div>
-)}
-</div>
+        <div
+          className="dropdown"
+          onMouseEnter={() => setShowFeatures(true)}
+          onMouseLeave={() => setShowFeatures(false)}
+        >
+          <button className="dropbtn">Features </button>
+          {showFeatures && (
+            <div className="dropdown-content">
+              <Link to="/planner" onClick={() => setShowFeatures(false)}>Plan</Link>
+              <Link to="/budget" onClick={() => setShowFeatures(false)}>Track</Link>
+              <Link to="/reports" onClick={() => setShowFeatures(false)}>Report</Link>
+              <Link to="/converter" onClick={() => setShowFeatures(false)}>Converter</Link>
+              <Link to="/collaborative-budget" onClick={() => setShowFeatures(false)}>Collaborative Budgeting</Link>
+            </div>
+          )}
+        </div>
+      </div>
 
-
-      {/* Navigation and Auth Links */}
-<div className="auth-links">
+      {/* Auth Links */}
+      <div className="auth-links">
         {!user ? (
           <>
             <Link to="/signup" className="auth-btn">Sign Up</Link>
@@ -87,3 +87,5 @@ onMouseLeave={() => setShowFeatures(false)}
 }
 
 export default Header;
+
+
