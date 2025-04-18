@@ -1,8 +1,4 @@
-
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
-import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import "../styles/header.css";
@@ -10,6 +6,7 @@ import Logo from "../assets/Logo.png";
 import { useAuth } from "../firebase/AuthContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase/firebaseConfig";
+
 
 function Header() {
 
