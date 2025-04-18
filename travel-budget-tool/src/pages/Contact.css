@@ -8,12 +8,6 @@
     margin: 0 auto;
   }
   
-  .contact-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
   .contact-info {
     width: 100%;
     max-width: 500px;
@@ -23,8 +17,7 @@
   .contact-info-title {
     display: block;
     margin-bottom: 10px;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 15px;
     color: #15e8f6;
   }
   
