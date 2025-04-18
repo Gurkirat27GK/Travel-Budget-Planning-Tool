@@ -64,13 +64,13 @@ function Home() {
       {/* Second Row - 2 Cards */}
       <section className="features">
         <div className="feature-card">
-          <img src="https://img.icons8.com/ios-filled/100/currency-exchange.png" alt="Converter" />
+          <img src="https://img.icons8.com/?size=100&id=7748&format=png&color=14089b" alt="Converter" />
           <h3>Currency Converter</h3>
           <p>Convert your expenses in real-time with accurate exchange rates.</p>
           <button onClick={navigateToCurrencyConverter} className="cta-button">Convert Now</button>
         </div>
         <div className="feature-card">
-          <img src="https://img.icons8.com/ios-filled/100/group-foreground-selected.png" alt="Collaborate" />
+          <img src= "https://img.icons8.com/?size=100&id=mqcxFECRbI85&format=png&color=14089b" alt="Collaborate" />
           <h3>Collaborative Budgeting</h3>
           <p>Work together with your travel companions to track shared expenses.</p>
           <button onClick={navigateToCollaborativeBudget} className="cta-button">Collaborate</button>
