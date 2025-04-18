@@ -3,15 +3,20 @@ import { useNavigate } from "react-router-dom";
 import "../styles/home.css";
 import MapSection from "../components/MapSection";
 import Goals from "./goals";
+import sample from "../assets/0418.mp4"
 
 function Home() {
   const navigate = useNavigate();
-
   const navigateToReports = () => navigate("/reports");
   const navigateToStartPlanning = () => navigate("/Planner");
   const navigateToTrack = () => navigate("/Budget");
   const navigateToBudget = () => navigate("/Goals");
   const navigateToCurrencyConverter = () => navigate("/CurrencyConverter");
+
+  <video className='videoTag' autoPlay loop muted>
+    <source src={sample} type='.mp4' />
+  </video>
+
 
   return (
     <div className="home-container">
