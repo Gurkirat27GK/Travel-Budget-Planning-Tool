@@ -37,7 +37,7 @@ const Reports = () => {
 
   return (
     <div style={{ padding: "2rem", fontFamily: "Arial, sans-serif" }}>
-      <h2 style={{ textAlign: "center", marginBottom: "2rem", color: "#00f2ff", fontSize: "2.5rem" }}>Travel Budget Report</h2>
+      <h2 style={{ textAlign: "center", marginBottom: "2rem", color: "#00f2ff", fontSize: "2.5rem" }}>Expense Report</h2>
 
       <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap", justifyContent: "center" }}>
         
@@ -67,7 +67,6 @@ const Reports = () => {
         >
           Export to PDF
         </button>
-        
         <CSVLink 
           data={expenses} 
           headers={headers} 

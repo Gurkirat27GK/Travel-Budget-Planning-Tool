@@ -19,7 +19,7 @@ export default function Budget() {
   const addExpense = async (expense) => {
     if (editing) {
       await update(ref(db, `expenses/${editing.id}`), expense);
-      setEditing(null); // Clear editing after update
+      setEditing(null); 
     } else {
       const newRef = push(ref(db, 'expenses'));
       await set(newRef, expense);
