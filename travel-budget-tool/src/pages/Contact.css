@@ -1,15 +1,21 @@
 .contact-section {
     padding: 40px 20px;
-    background-color: white;
+    background-color: #0f1829;
   }
   
   .contact-container {
-    max-width: 962px;
+    max-width: 960px;
     margin: 0 auto;
   }
   
+  .contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
   .contact-info {
-    width: 80%;
+    width: 100%;
     max-width: 500px;
     margin-bottom: 30px;
   }
@@ -17,25 +23,31 @@
   .contact-info-title {
     display: block;
     margin-bottom: 10px;
-    font-size: 14px;
-    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    color: #15e8f6;
   }
   
   .contact-info-heading {
     margin-bottom: 20px;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: bold;
-    color: black;
+    color: #3aaae9;
   }
   
   .contact-info-text {
     margin-bottom: 20px;
     font-size: 14px;
-    color: black;
+    color: #bac0c8;
     line-height: 1.5;
   }
   
-
+  .contact-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
   .contact-info-icon-container {
     margin-right: 15px;
     width: 40px;
@@ -56,12 +68,12 @@
     margin-bottom: 5px;
     font-size: 16px;
     font-weight: bold;
-      color: black;;
+      color: #3aaae9;;
   }
   
   .contact-info-details p {
     font-size: 14px;
-    color: black;
+    color: #bac0c8;
   }
   
   .contact-form {
@@ -70,19 +82,19 @@
   }
   
   .contact-input-box {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   
   .contact-input {
-    width: 92%;
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
   }
   
   .contact-textarea {
-    width: 92%;
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -95,7 +107,7 @@
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
-    width: 95%;
+    width: 100%;
   }
