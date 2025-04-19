@@ -22,10 +22,10 @@ tripwise/
 ```
 
 ## Video Walkthrough of the Project
-_Attach your walkthrough video link here._
+[https://drive.google.com/file/d/1jdLbMzGnXV0qM-n7CJyC9h2TxVsF6_8C/view?usp=sharing]
 
 ## Video Walkthrough of the Codebase
-_Attach your code walkthrough video link here._
+[https://drive.google.com/file/d/153EYMnA0T_9AqkkZesxTsN0n7IlH6fFR/view]
 
 ## Features
 - User authentication using Firebase
