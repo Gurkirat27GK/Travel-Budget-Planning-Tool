@@ -116,7 +116,6 @@ function Home() {
       <div className="review-author">— Meena T., Eurotrip Enthusiast</div>
     </div>
 
-    
   </div>
 </section>
 

@@ -92,8 +92,8 @@ function Header() {
               <Link to="/reports" onClick={() => setShowFeatures(false)}>
               Report
               </Link>
-              <Link to="/converter" onClick={() => setShowFeatures(false)}>
-              Converter
+              <Link to="/CurrencyConverter" onClick={() => setShowFeatures(false)}>
+              Currency Converter
               </Link>
               <Link to="/Goals" onClick={() => setShowFeatures(false)}>
               Budget Goals
